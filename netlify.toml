@@ -5,3 +5,11 @@
   from = "/library.js"
   to = "/.netlify/functions/library"
   status = 200
+
+  from = "/preview"
+  to = "/.netlify/functions/preview"
+  status = 200
+
+  from = "/payment"
+  to = "/.netlify/functions/payment"
+  status = 200
