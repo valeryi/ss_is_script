@@ -1,8 +1,9 @@
-exports.handler = (event, context, callback) => {
+export const paymentResponse = {
+  url: 'https://ssisscript.netlify.app/library.js',
+};
+
+export const paymentHandler = (response) => (_event, _context, callback) => {
   try {
-      const response = {
-          url: 'https://example.com/index.js' // Replace with your actual script URL
-      };
       callback(null, {
           statusCode: 200,
           body: JSON.stringify(response),
@@ -14,3 +15,5 @@ exports.handler = (event, context, callback) => {
       });
   }
 };
+
+exports.handler = paymentHandler(paymentResponse);
