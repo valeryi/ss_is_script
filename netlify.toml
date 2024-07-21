@@ -1,2 +1,7 @@
 [build]
   functions = "netlify/functions"
+
+[[redirects]]
+  from = "/library.js"
+  to = "/.netlify/functions/library"
+  status = 200
