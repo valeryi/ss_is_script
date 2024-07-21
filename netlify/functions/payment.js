@@ -1,8 +1,8 @@
-export const paymentResponse = {
+const paymentResponse = {
   url: 'https://ssisscript.netlify.app/library.js',
 };
 
-export const paymentHandler = (response) => (_event, _context, callback) => {
+const paymentHandler = (response) => (_event, _context, callback) => {
   try {
       callback(null, {
           statusCode: 200,
@@ -16,4 +16,8 @@ export const paymentHandler = (response) => (_event, _context, callback) => {
   }
 };
 
-exports.handler = paymentHandler(paymentResponse);
+module.exports = {
+  paymentResponse,
+  paymentHandler,
+  handler: paymentHandler(paymentResponse),
+};
