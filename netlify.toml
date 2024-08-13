@@ -2,8 +2,13 @@
   functions = "netlify/functions"
 
 [[redirects]]
-  from = "/library.js"
-  to = "/.netlify/functions/library"
+  from = "/SS_Klarna3.js"
+  to = "/.netlify/functions/SS_Klarna3"
+  status = 200
+
+[[redirects]]
+  from = "/SS_TEST.js"
+  to = "/.netlify/functions/SS_TEST"
   status = 200
 
 [[redirects]]
